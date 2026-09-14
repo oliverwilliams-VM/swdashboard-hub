@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Subway Programme Dashboards</title>
+
+    <!-- Warms up DNS/TCP/TLS for each dashboard ahead of a click, so the
+         eventual navigation skips connection setup and goes straight to
+         requesting the page. Add a matching pair here whenever a new
+         dashboard is added to the DASHBOARDS list in src/App.jsx. -->
+    <link rel="preconnect" href="https://install-dashboard.vercel.app" />
+    <link rel="dns-prefetch" href="https://install-dashboard.vercel.app" />
+    <link rel="preconnect" href="https://sfktracking.vercel.app" />
+    <link rel="dns-prefetch" href="https://sfktracking.vercel.app" />
+    <link rel="preconnect" href="https://swdefp-swaps.vercel.app" />
+    <link rel="dns-prefetch" href="https://swdefp-swaps.vercel.app" />
   </head>
   <body>
     <div id="root"></div>
