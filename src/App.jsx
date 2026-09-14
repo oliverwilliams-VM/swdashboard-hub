@@ -20,6 +20,12 @@ const DASHBOARDS = [
     description: 'Worldline \u2192 FreedomPay payment migration tracker for the German store estate.',
     url: 'https://swdefp-swaps.vercel.app/',
     emoji: '\u{1F4B3}'
+  },
+  {
+    name: 'PipelineBoard',
+    description: 'A lean, KPI-focused offshoot of the Install Project Dashboard \u2014 tables and goals, no charts.',
+    url: 'https://swpipeline-board.vercel.app/',
+    emoji: '\u{1F4CB}'
   }
 ];
 
