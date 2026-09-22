@@ -26,6 +26,12 @@ const DASHBOARDS = [
     description: 'A lean, KPI-focused offshoot of the Install Project Dashboard \u2014 tables and goals, no charts.',
     url: 'https://swpipeline-board.vercel.app/',
     emoji: '\u{1F4CB}'
+  },
+  {
+    name: 'Install Status Tracker',
+    description: 'Twice-weekly burndown call prep \u2014 upcoming installs by week, readiness form status, and resourcing.',
+    url: 'https://install-status-tracker.vercel.app/',
+    emoji: '\u{2705}'
   }
 ];
 
