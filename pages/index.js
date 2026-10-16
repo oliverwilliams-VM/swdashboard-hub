@@ -295,14 +295,20 @@ export default function Home() {
             </div>
           </div>
           <div className="controls">
-            <button className="btn" onClick={() => exportNeedsInfo(data.items)} disabled={!data || !data.columnsFound.detailsComplete || !needsCount} title="Download every job that still needs information, soonest install first">⬇ Needs info{data && data.columnsFound.detailsComplete ? ` (${needsCount})` : ""}</button>
-            <button className="btn" onClick={exportPdf} disabled={!m}>⬇ Export PDF</button>
             <button className="btn" onClick={() => load(true)} disabled={loading}>{loading ? "Refreshing…" : "↻ Refresh"}</button>
             <img src="/Vita Mojo_Primary_Dark.png" alt="Vita Mojo" className="logo vm" />
           </div>
         </div>
       </header>
       <main className="main">
+        {m && (
+          <div className="actions">
+            <button className="act primary" onClick={() => exportNeedsInfo(data.items)} disabled={!data.columnsFound.detailsComplete || !needsCount} title="One CSV of every job with anything still missing, soonest install first">
+              ⬇ Download all records with missing info{data.columnsFound.detailsComplete ? ` (${needsCount})` : " — column not found"}
+            </button>
+            <button className="act" onClick={exportPdf}>⬇ Export dashboard to PDF</button>
+          </div>
+        )}
         {error && <div className="banner err">Couldn't load The Brain: {error}</div>}
         {missing.length > 0 && !error && <div className="banner warn">Couldn't auto-detect board columns for: {missing.join(", ")}. Open /api/brain-check to see the board's columns, then set the matching BRAIN_COL_… variable in Vercel.</div>}
         {!m && !error && <div className="grid g-hero">{[1, 2, 3, 4].map((i) => <div key={i} className="skeleton" />)}</div>}
@@ -340,7 +346,7 @@ export default function Home() {
             </div>
           </>
         )}
-        <p className="foot">{data ? `${data.boardName} · ${total} jobs · refreshes every 5 minutes` : ""}</p>
+        <p className="foot">{data ? `${data.boardName} · ${total} jobs · refreshes every 5 minutes · v3` : ""}</p>
       </main>
       {view && data && <Drawer view={view} items={data.items} onClose={() => setView(null)} />}
     </>

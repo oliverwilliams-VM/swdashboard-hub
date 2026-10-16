@@ -43,6 +43,13 @@ button { font: inherit; color: inherit; }
 .btn:disabled { opacity: 0.55; cursor: default; }
 
 .main { max-width: 1600px; margin: 0 auto; padding: 1.4rem clamp(1rem, 3vw, 2.5rem) 3rem; }
+.actions { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+.act { background: var(--panel-alt); border: 1px solid var(--border-strong); border-radius: 12px; padding: 0.75rem 1.2rem; font-size: 0.92rem; font-weight: 600; cursor: pointer; transition: background .15s, border-color .15s; }
+.act:hover:not(:disabled) { border-color: #4a5668; background: #232a35; }
+.act.primary { background: #ffc72c; color: #111; border-color: #ffc72c; }
+.act.primary:hover:not(:disabled) { background: #ffd24f; border-color: #ffd24f; }
+.act:disabled { opacity: .5; cursor: default; }
+@media print { .actions { display: none !important; } }
 .section { margin: 1.6rem 0 0.7rem; display: flex; align-items: baseline; gap: 0.7rem; }
 .section:first-child { margin-top: 0; }
 .section h2 { margin: 0; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); font-weight: 650; }
