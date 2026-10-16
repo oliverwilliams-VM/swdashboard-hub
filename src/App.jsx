@@ -32,6 +32,18 @@ const DASHBOARDS = [
     description: 'Twice-weekly burndown call prep \u2014 upcoming installs by week, readiness form status, and resourcing.',
     url: 'https://install-status-tracker.vercel.app/',
     emoji: '\u{2705}'
+  },
+  {
+    name: 'The Brain — Management Dashboard',
+    description: 'Apex install requests at a glance — pipeline by stage, booking status, dates to agree, SLA, hold reasons and install calendar.',
+    url: 'https://swthebrain.vercel.app/',
+    emoji: '\u{1F9E0}'
+  },
+  {
+    name: 'Live SW Map',
+    description: 'Map of all live Subway sites by country, county and region — any kiosk type.',
+    url: 'https://liveswmap.vercel.app/',
+    emoji: '\u{1F5FA}\u{FE0F}'
   }
 ];
 
